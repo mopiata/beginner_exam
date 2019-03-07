@@ -20,6 +20,7 @@ node {
 	sh "docker login -u 'mopiata' -p 'dockerP@ss' "
 	sh "docker tag exam:latest mopiata/exam:latest"
 	sh "docker push mopiata/exam:latest"
+	sh "docker run -d mopiata/exam:latest"
     }
 
       stage('Apply changes to the environment') 
